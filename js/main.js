@@ -1,74 +1,38 @@
-// Получаем модальное окно по id.
-const orderDialog = document.getElementById('order-dialog');
+// ===== Окно быстрого просмотра товара =====
+const productDialog = document.getElementById('product-dialog');
 
-// Получаем все кнопки заказа в карточках товаров.
-const orderButtons = document.querySelectorAll('.product-card__button');
+// Скрипт работает только на страницах, где есть окно товара.
+if (productDialog) {
+  const productCards = document.querySelectorAll('.product-card');
 
-// Получаем кнопку закрытия модального окна.
-const closeDialogButton = document.getElementById('close-order-dialog');
+  // Копирует данные из карточки в окно и открывает его.
+  function openProductDialog(card) {
+    const image = card.querySelector('.product-card__image');
 
-// Получаем скрытое поле, в которое будет записан выбранный товар.
-const selectedProductInput = document.getElementById('selected-product');
+    document.getElementById('product-dialog-image').src = image.src;
+    document.getElementById('product-dialog-image').alt = image.alt;
+    document.getElementById('product-dialog-title').textContent = card.querySelector('.product-card__title').textContent;
+    document.getElementById('product-dialog-description').textContent = card.querySelector('.product-card__description').textContent;
+    document.getElementById('product-dialog-price').textContent = card.querySelector('.product-card__price').textContent;
+    document.getElementById('product-dialog-link').href = card.querySelector('.product-card__link').href;
 
-// Перебираем все кнопки «Заказать».
-orderButtons.forEach((button) => {
-  button.addEventListener('click', () => {
-    // Получаем название товара из data-атрибута.
-    const productName = button.dataset.product;
-
-    // Записываем название товара в скрытое поле формы.
-    selectedProductInput.value = productName;
-
-    // Открываем модальное окно.
-    orderDialog.showModal();
-  });
-});
-
-// Закрываем модальное окно по кнопке «Закрыть».
-closeDialogButton.addEventListener('click', () => {
-  orderDialog.close();
-});
-
-// Получаем форму заявки.
-const orderForm = document.getElementById('order-form');
-
-// Получаем сообщение об успешной отправке.
-const successMessage = document.getElementById('success-message');
-
-// Обрабатываем отправку формы.
-orderForm.addEventListener('submit', (event) => {
-  // Отменяем стандартную отправку формы,
-  // потому что backend пока не подключён.
-  event.preventDefault();
-
-  // Сбрасываем предыдущие признаки ошибок.
-  const formElements = Array.from(orderForm.elements);
-
-  formElements.forEach((element) => {
-    if (element.willValidate) {
-      element.removeAttribute('aria-invalid');
-    }
-  });
-
-  // Проверяем встроенные HTML-ограничения формы.
-  if (!orderForm.checkValidity()) {
-    formElements.forEach((element) => {
-      if (element.willValidate && !element.checkValidity()) {
-        element.setAttribute('aria-invalid', 'true');
-      }
-    });
-
-    // Показываем стандартные сообщения браузера.
-    orderForm.reportValidity();
-    return;
+    productDialog.showModal();
   }
 
-  // Показываем сообщение об успешной отправке.
-  successMessage.hidden = false;
+  productCards.forEach((card) => {
+    // Клик по карточке. Ссылки «Подробнее» и «Заказать» работают как обычно.
+    card.addEventListener('click', (event) => {
+      if (event.target.closest('a, button')) {
+        return;
+      }
+      openProductDialog(card);
+    });
 
-  // Очищаем форму.
-  orderForm.reset();
-
-  // Закрываем модальное окно.
-  orderDialog.close();
-});
+    // Enter, когда в фокусе сама карточка.
+    card.addEventListener('keydown', (event) => {
+      if (event.key === 'Enter' && event.target === card) {
+        openProductDialog(card);
+      }
+    });
+  });
+}

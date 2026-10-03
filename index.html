@@ -3,7 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Учебный интернет-магазин</title>
+  <title>ReMi</title>
+  <link rel="icon" href="images/remi-icon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="css/style.css">
   <script src="js/main.js" defer></script>
   <meta property="og:type" content="website">
@@ -14,7 +15,9 @@
 <body>
   <header class="site-header">
     <div class="site-header__inner">
-      <a class="site-header__logo" href="index.html">ShopProject</a>
+      <a class="site-header__logo" href="index.html">
+        <img class="site-header__logo-image" src="images/remi-logo.svg" alt="ReMi — рояли и пианино" width="306" height="100">
+      </a>
 
       <nav class="site-nav" aria-label="Основная навигация">
         <ul class="site-nav__list">
@@ -25,6 +28,9 @@
           </li>
           <li class="site-nav__item">
             <a class="site-nav__link" href="catalog.html">Каталог</a>
+          </li>
+          <li class="site-nav__item">
+            <a class="site-nav__link" href="order.html">Заявка</a>
           </li>
           <li class="site-nav__item">
             <a class="site-nav__link" href="contacts.html">Контакты</a>
@@ -41,23 +47,20 @@
 
   <main>
     <section class="hero">
-      <h1>Учебный интернет-магазин</h1>
+      <h1>Рояли и пианино для дома, сцены и студии</h1>
       <p>
-        Это стартовая страница учебного frontend-проекта.
-        В дальнейшем на её основе будет разработан многостраничный сайт
-        интернет-магазина или каталога услуг.
+        ReMi — магазин акустических, цифровых и гибридных инструментов
+        от Bösendorfer, Yamaha, Kawai и Roland.
       </p>
-      <a class="button" href="#popular">Перейти к товарам</a>
+      <a class="button button--primary" href="#popular">Перейти к товарам</a>
     </section>
 
     <section class="section" id="advantages">
       <h2>Преимущества проекта</h2>
 
       <ul class="advantages-list">
-        <li>понятная HTML-структура;</li>
-        <li>семантические блоки страницы;</li>
-        <li>подключение внешнего CSS-файла;</li>
-        <li>подготовка к разработке многостраничного сайта.</li>
+        <li>проект про рояли;</li>
+        <li>аутентичный дизайн;</li>
       </ul>
     </section>
 
@@ -65,43 +68,78 @@
       <h2>Популярные товары</h2>
 
       <div class="products-grid">
-        <article class="product-card">
-          <h3 class="product-card__title">Товар 1</h3>
-          <p class="product-card__description">Краткое описание учебного товара.</p>
-          <p class="product-card__price">Цена: 1000 руб.</p>
-          <button
-            class="button button--primary product-card__button"
-            type="button"
-            data-product="Товар 1"
+        <article class="product-card" tabindex="0">
+          <span class="product-card__badge">Хит</span>
+          <img
+            class="product-card__image"
+            src="images/product-1.png"
+            alt="Товар 1"
+            width="200"
+            height=auto
+            loading="lazy"
           >
-            Заказать
-          </button>
+          <h3 class="product-card__title">Концертный рояль 230VC</h3>
+          <p class="product-card__description">
+            Концертный рояль Bösendorfer 230VC Vienna Concert — австрийский инструмент премиум-класса длиной 230 см, созданный для концертных залов, студий и требовательных пианистов.
+          </p>
+          <p class="product-card__price">Цена: 67 000 руб.</p>
+          <a class="product-card__link" href="product/product-bosendorfer.html">Подробнее</a>
+          <a class="button button--primary product-card__button" href="order.html">Заказать</a>
         </article>
 
-        <article class="product-card">
-          <h3 class="product-card__title">Товар 2</h3>
-          <p class="product-card__description">Краткое описание учебного товара.</p>
-          <p class="product-card__price">Цена: 1500 руб.</p>
-          <button
-            class="button button--primary product-card__button"
-            type="button"
-            data-product="Товар 2"
+        <article class="product-card" tabindex="0">
+          <img
+            class="product-card__image"
+            src="images/product-2.png"
+            alt="Товар 1"
+            width="200"
+            height=auto
+            loading="lazy"
           >
-            Заказать
-          </button>
+          <h3 class="product-card__title">Акустический рояль Yamaha GB1K FP</h3>
+          <p class="product-card__description">
+            Компактный кабинетный рояль серии GB в декоре «французский прованс» (вишнёвый полированный корпус, изогнутые ножки), сочетающий фирменное звучание Yamaha и элегантный интерьерный дизайн.
+          </p>
+          <p class="product-card__price">Цена: 3 799 руб.</p>
+          <a class="product-card__link" href="product/product-yamaha-gb1k.html">Подробнее</a>
+          <a class="button button--primary product-card__button" href="order.html">Заказать</a>
         </article>
 
-        <article class="product-card">
-          <h3 class="product-card__title">Товар 3</h3>
-          <p class="product-card__description">Краткое описание учебного товара.</p>
-          <p class="product-card__price">Цена: 2000 руб.</p>
-          <button
-            class="button button--primary product-card__button"
-            type="button"
-            data-product="Товар 3"
+        <article class="product-card" tabindex="0">
+          <img
+            class="product-card__image"
+            src="images/product-3.png"
+            alt="Товар 1"
+            width="200"
+            height=auto
+            loading="lazy"
           >
-            Заказать
-          </button>
+          <h3 class="product-card__title">Рояль цифровой Roland GP 9 PW</h3>
+          <p class="product-card__description">
+            Флагманский цифровой рояль Roland в полноразмерном корпусе baby grand (длина 151 см) с полированным белым покрытием. Построен вокруг концепции Piano Reality: моделирование звука, механики, педалей и акустики концертного рояля в одном инструменте.
+          </p>
+          <p class="product-card__price">Цена: 4 500 руб.</p>
+          <a class="product-card__link" href="product/product-roland-gp9.html">Подробнее</a>
+          <a class="button button--primary product-card__button" href="order.html">Заказать</a>
+        </article>
+
+        <article class="product-card  product-card--discount" tabindex="0">
+          <span class="product-card__badge product-card__badge--sale">Скидка</span>
+          <img
+            class="product-card__image"
+            src="images/product-4.png"
+            alt="Товар 1"
+            width="200"
+            height=auto
+            loading="lazy"
+          >
+          <h3 class="product-card__title">Рояль акустический Kawai GL50 M/ PEP</h3>
+          <p class="product-card__description">
+            Самый большой инструмент серии GL (длина 188 см), японский концертно-кабинетный рояль с насыщенным, мощным звучанием и механикой Millennium III. Обозначение M/PEP = чёрный полированный лак (Polished Ebony).
+          </p>
+          <p class="product-card__price">Цена: 2 700 руб.</p>
+          <a class="product-card__link" href="product/product-kawai-gl50.html">Подробнее</a>
+          <a class="button button--primary product-card__button" href="order.html">Заказать</a>
         </article>
 
       </div>
@@ -109,63 +147,40 @@
 
 
     <aside class="aside-info">
-      <h2>Информация для студентов</h2>
+      <h2>Не знаете, что выбрать?</h2>
       <p>
-        На следующих практических занятиях этот проект будет расширяться:
-        появятся формы, модальное окно, дополнительные страницы, Flex/Grid,
-        БЭМ-структура и адаптивная версия сайта.
+        Оставьте заявку, и мы подберём инструмент под ваш бюджет, помещение
+        и уровень игры. <a href="order.html">Оформить заявку</a>
       </p>
     </aside>
 
   </main>
 
-  <footer id="contacts">
+  <footer class="site-footer" id="contacts">
     <p>&copy; 2026 Учебный проект. Все права защищены.</p>
     <p>Дисциплина: Фронтенд и бэкенд разработка</p>
   </footer>
 
-  <dialog class="order-dialog" id="order-dialog" aria-labelledby="order-dialog-title">
-    <h2 class="order-dialog__title" id="order-dialog-title">Оформление заявки</h2>
+  <dialog class="product-dialog" id="product-dialog" aria-labelledby="product-dialog-title">
+    <div class="product-dialog__inner">
+      <form method="dialog">
+        <button class="product-dialog__close" aria-label="Закрыть">×</button>
+      </form>
 
-    <form class="order-form" id="order-form" action="#" method="post" novalidate>
-      <input type="hidden" id="selected-product" name="product">
-      <div class="order-form__field">
-        <label class="order-form__label" for="order-name">Имя</label>
-        <input
-          class="order-form__input"
-          id="order-name"
-          name="name"
-          type="text"
-          required
-        >
+      <img class="product-dialog__image" id="product-dialog-image" alt="">
+
+      <div class="product-dialog__info">
+        <h2 class="product-dialog__title" id="product-dialog-title"></h2>
+        <p class="product-dialog__description" id="product-dialog-description"></p>
+        <p class="product-dialog__price" id="product-dialog-price"></p>
+        <div class="product-dialog__actions">
+          <a class="button button--secondary" id="product-dialog-link" href="#">Подробнее</a>
+          <a class="button button--primary" href="order.html">Заказать</a>
+        </div>
       </div>
-
-      <div class="order-form__field">
-        <label class="order-form__label" for="order-email">E-mail</label>
-        <input
-          class="order-form__input"
-          id="order-email"
-          name="email"
-          type="email"
-          required
-        >
-      </div>
-
-      <div class="order-form__actions">
-        <button class="button button--primary" type="submit">
-          Отправить заявку
-        </button>
-
-        <button class="button button--secondary" type="button" id="close-order-dialog">
-          Закрыть
-        </button>
-      </div>
-    </form>
+    </div>
   </dialog>
-
-  <p class="success-message" id="success-message" hidden>
-    Форма успешно отправлена!
-  </p>
-
+  
+  <a class="to-top" href="#" aria-label="Наверх">↑</a>
 </body>
 </html>

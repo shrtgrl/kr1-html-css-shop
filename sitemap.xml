@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url>
-    <loc>https://shrtgrl.github.io/kr1-html-css-shop/</loc>
-  </url>
-  <url>
-    <loc>https://shrtgrl.github.io/kr1-html-css-shop/catalog.html</loc>
-  </url>
-  <url>
-    <loc>https://shrtgrl.github.io/kr1-html-css-shop/contacts.html</loc>
-  </url>
+  <url><loc>https://shrtgrl.github.io/kr1-html-css-shop/</loc></url>
+  <url><loc>https://shrtgrl.github.io/kr1-html-css-shop/catalog.html</loc></url>
+  <url><loc>https://shrtgrl.github.io/kr1-html-css-shop/order.html</loc></url>
+  <url><loc>https://shrtgrl.github.io/kr1-html-css-shop/contacts.html</loc></url>
+  <url><loc>https://shrtgrl.github.io/kr1-html-css-shop/product/product-bosendorfer.html</loc></url>
+  <url><loc>https://shrtgrl.github.io/kr1-html-css-shop/product/product-yamaha-gb1k.html</loc></url>
+  <url><loc>https://shrtgrl.github.io/kr1-html-css-shop/product/product-roland-gp9.html</loc></url>
+  <url><loc>https://shrtgrl.github.io/kr1-html-css-shop/product/product-kawai-gl50.html</loc></url>
+  <url><loc>https://shrtgrl.github.io/kr1-html-css-shop/product/product-wendl-lung-w123.html</loc></url>
+  <url><loc>https://shrtgrl.github.io/kr1-html-css-shop/product/product-yamaha-N3X-AvantGrand.html</loc></url>
 </urlset>
