@@ -5,6 +5,7 @@
 :root {
   /* Основные цвета проекта */
   --color-bg: #F0E9E3;              /* светлый молочный — фон страницы */
+  --color-bg-card: #c7bcb2; 
   --color-text: #332E2B;            /* почти чёрный тёплый — основной текст */
   --color-muted: #6B605A;           /* затемнённый тауп — описания */
   --color-primary: #72393F;         /* винный — кнопки, ссылки, акценты */
@@ -187,7 +188,7 @@ footer {
   padding: var(--space-md);
   border: 1px solid var(--color-border);
   border-radius: var(--radius-md);
-  background-color: var(--color-bg);
+  background-color: var(--color-bg-card);
 }
 
 .product-card:hover {
