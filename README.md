@@ -168,3 +168,8 @@ GitHub Pages: https://shrtgrl.github.io/kr1-html-css-shop/
 - сообщение об успешной отправке заявки на чистом CSS через `:target`, без JavaScript;
 - подсветка неверно заполненных полей через `:user-invalid`;
 - блок «Что будет дальше» на странице заявки.
+
+## Как посмотреть проект
+
+- Открыть сайт: https://shrtgrl.github.io/kr1-html-css-shop/
+- Или скачать репозиторий и открыть `index.html` в браузере.
